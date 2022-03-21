@@ -1,13 +1,15 @@
 import { useEffect } from "react";
 import Api from "../service/Api";
 import { useState } from 'react'
-
+type render = {
+    rendered : string,
+}
 type PostData ={
     id:number;
-    name:string;
+    title:render;
     status:string;
     feature_media:number,
-    content:Object,
+    content:render,
     page_view:number,
     categories:[number],
 }
