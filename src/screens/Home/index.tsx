@@ -12,9 +12,7 @@ export function Home(){
         <View>
             <Header/>
             <ScrollView
-            style={styles.container}
             showsVerticalScrollIndicator={false}
-            contentContainerStyle={{paddingRight:40 }}
             >
                     {listCategory.map(item=>{
                         return(

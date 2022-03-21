@@ -28,7 +28,6 @@ export function ListCategory({
             horizontal
             style={styles.scrollContainer}
             showsHorizontalScrollIndicator={false}
-            contentContainerStyle={{paddingRight:40 }}
             >
                 {
                     listPost.map(item=>{

@@ -3,9 +3,9 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
     header:{
-        width:'100%',
         flexDirection:'row',
-        justifyContent:'space-between'
+        justifyContent:'space-between',
+        margin:15,
     },
     title:{
         fontFamily:theme.fonts.text700,
