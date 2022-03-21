@@ -1,20 +1,20 @@
 export const theme = {
     colors:{
-        primary:'#02080D',
-        secondary:'#1E1E1E',
-        border:'#2E2E2E',
-        active:'#EA1010',
-        active2:'#FF0342',
-        inative:'#E1E1E1',
-        modal:'#1E1E1E',
-        inative3:'#5e5e5e',
-        textColor:"#FFFF",
-        overlay:'rgba(0,0,0,0.3)',
-        textColorLight:'#5e5e5e',
-        textColorActive:"#EA1010"
+        background:'#FFFFFF',
+        overlay:'#000',
+        shadow:'#0000000F',
+        primary:'#FFA900',
+        secondary:'#535353',
+        menu:"#3CC6AA",
+        titleColor:'#2AB598',
+        textColor:'#868686',
+        textColorLight:'#535353',
+        textColorhighlight:'#FDA506',
+        buttonColor:'#FFA900',
+        footerColor:'#1ABC9C'
     },
     fonts:{
-        text400: 'Inter_400Regular',
+        text400: 'Roboto',
         text500: 'Inter_500Medium',
     }
 }
