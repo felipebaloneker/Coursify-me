@@ -22,6 +22,7 @@ export function ListCategory({
             <View>
                 {
                     listPost.map(item=>{
+                            console.log(`Post:${item.id} -- ${item.link}`)
                         return(
                             <Text key={item.id}>{item.name}</Text>
                         )
