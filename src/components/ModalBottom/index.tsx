@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, Modal } from "react-native";
+import { RectButton } from "react-native-gesture-handler";
 import {styles} from './styles'
 
 export default function ModalBottom(){
@@ -18,7 +19,17 @@ export default function ModalBottom(){
         visible={modalOpen}
         >
             <View style={styles.modal}>
-                <Text>modal</Text>
+                <View>
+
+                </View>
+                <View>
+
+                </View>
+                <View>
+                    <RectButton style={styles.button}>
+                        <Text style={styles.modalText}>Quero conhecer a plataforma</Text>
+                    </RectButton>
+                </View>
             </View>                   
         </Modal>
     )

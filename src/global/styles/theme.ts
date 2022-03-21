@@ -11,6 +11,7 @@ export const theme = {
         textColor:'#868686',
         textColorLight:'#535353',
         textColorhighlight:'#FDA506',
+        textModalColor:'#FFFFFF',
         buttonColor:'#FFA900',
         footerColor:'#1ABC9C'
     },
