@@ -6,9 +6,21 @@ import { MaterialCommunityIcons} from '@expo/vector-icons'
 import { theme } from '../../global/styles/theme';
 import { mdiMenu } from '@mdi/js';
 
-export function Header(){
+type Props={
+    back?:boolean,
+}
+
+export function Header({back}:Props){
     return(
         <View style={styles.container}>
+            <View
+            style={{display:back? 'flex':'none'}}
+            >
+                <MaterialCommunityIcons
+                    name="arrow-left"
+                    size={32}
+                    />
+            </View>
             <View>
                 <Image 
                 source={Logo}

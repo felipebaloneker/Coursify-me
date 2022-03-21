@@ -7,7 +7,6 @@ import logo from '../../assets/logo-coursify-w.png'
 export default function ModalBottom(){
     const [modalOpen,setModalOpen]= useState(true)
     const modalClose =()=>{
-        console.log('close')
         setModalOpen(false)
     }
     useEffect(()=>{
