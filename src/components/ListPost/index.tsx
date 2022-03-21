@@ -33,21 +33,22 @@ export function ListPost({
     const uri = media?.media_details.sizes.full.source_url
     const cleanContent = content.replace(/<\/?[^>]+(>|$)/g, "");
     return(
-        <View style={styles.container}>
-            <View>
-                <Image source={{uri}}
-                resizeMode="cover"
-                style={styles.image}
-                />
+        <RectButton>
+            <View style={styles.container}>
+                <View>
+                    <Image source={{uri}}
+                    resizeMode="cover"
+                    style={styles.image}
+                    />
+                </View>
+                <View style={styles.textWrp}>
+                    <Text style={styles.title}>{title}</Text>
+                    <Text style={styles.text}>{cleanContent}</Text>
+                    <RectButton>
+                        <Text style={styles.buttonText}>Leia Mais</Text>
+                    </RectButton>
+                </View>
             </View>
-            <View style={styles.textWrp}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.text}>{cleanContent}</Text>
-                <RectButton>
-                    <Text style={styles.buttonText}>Leia Mais</Text>
-                </RectButton>
-            </View>
-
-        </View>
+        </RectButton>
     )
 }
