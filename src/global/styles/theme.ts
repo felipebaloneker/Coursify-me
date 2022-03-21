@@ -14,7 +14,8 @@ export const theme = {
         footerColor:'#1ABC9C'
     },
     fonts:{
-        text400: 'Roboto',
-        text500: 'Inter_500Medium',
+        text700: 'Roboto_700Bold',
+        text500: 'Roboto_500Medium',
+        text400:'Roboto_400Regular',
     }
 }

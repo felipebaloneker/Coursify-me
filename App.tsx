@@ -3,8 +3,20 @@ import { View } from 'react-native';
 import {Home} from './src/screens/Home'
 import { theme } from './src/global/styles/theme'
 import {StatusBar} from 'react-native'
-export default function App() {
+import AppLoading from 'expo-app-loading'
+import {useFonts} from 'expo-font';
+import {Roboto_400Regular,Roboto_500Medium,Roboto_700Bold} from '@expo-google-fonts/roboto';
 
+export default function App() {
+  const [fontLoaded] = useFonts({
+    Roboto_400Regular,
+    Roboto_500Medium,
+    Roboto_700Bold
+  })
+
+  if(!fontLoaded){
+    return <AppLoading/>
+  }
   return (
     <View>
            <StatusBar
