@@ -1,5 +1,5 @@
 import React from 'react'
-import {ScrollView, View, Text} from 'react-native'
+import {ScrollView, View, Modal, Text} from 'react-native'
 import { Header } from '../../components/Header'
 import { ListCategory } from '../../components/ListCategory'
 import { categories } from '../../hook/categories'
@@ -24,6 +24,15 @@ export function Home(){
                         )
                     })}
             </ScrollView>
+            <Modal 
+            transparent={true}
+            >
+                <View style={styles.modal}>
+                        <View style={styles.modalWrp}>
+                            <Text>modal</Text>
+                        </View>
+                </View>                   
+            </Modal>
         </View>
     )
 }

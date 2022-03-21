@@ -6,6 +6,7 @@ export const theme = {
         primary:'#FFA900',
         secondary:'#535353',
         menu:"#3CC6AA",
+        modal:"#3CC6AA",
         titleColor:'#2AB598',
         textColor:'#868686',
         textColorLight:'#535353',
