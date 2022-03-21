@@ -5,6 +5,8 @@ import { WebView } from 'react-native-webview';
 import {postMedia} from '../../hook/postMedia'
 import { styles } from "./styles";
 import logo from '../../assets/logo.png'
+import RenderHtml from "react-native-render-html";
+
 type render={
     rendered:string,
 }
@@ -29,6 +31,7 @@ export function ListPost({
 }:Props){
     const {media} = postMedia(featured_media)
     const uri = media?.media_details.sizes.full.source_url
+    const cleanContent = content.replace(/<\/?[^>]+(>|$)/g, "");
     return(
         <View style={styles.container}>
             <View>
@@ -39,7 +42,7 @@ export function ListPost({
             </View>
             <View style={styles.textWrp}>
                 <Text style={styles.title}>{title}</Text>
-                <Text style={styles.text}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum in omnis architecto libero qui accusantium quod, reprehenderit placeat facere eligendi, porro asperiores alias temporibus ab cum! Dolores dicta quos laudantium.</Text>
+                <Text style={styles.text}>{cleanContent}</Text>
                 <RectButton>
                     <Text style={styles.buttonText}>Leia Mais</Text>
                 </RectButton>

@@ -12,11 +12,11 @@ export const styles = StyleSheet.create({
         shadowOffset: { height: 0, width: 0 },
         shadowOpacity:0.8,
         margin:10,
+        overflow:'hidden',
     },
     textWrp:{
         padding:9,
         marginTop:15,
-        margin:10,
     },
     title:{
         maxWidth:187,
@@ -28,7 +28,6 @@ export const styles = StyleSheet.create({
     text:{
         maxHeight:78,
         marginTop:16,
-        marginBottom:15,
     },
     buttonText:{
         color:theme.colors.textColorhighlight,
