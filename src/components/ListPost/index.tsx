@@ -1,6 +1,8 @@
 import React from "react";
-import { View,Text } from "react-native";
+import { View,Text,} from "react-native";
+import { WebView } from 'react-native-webview';
 import {postMedia} from '../../hook/postMedia'
+import { styles } from "./styles";
 type render={
     rendered:string,
 }
@@ -25,8 +27,11 @@ export function ListPost({
 }:Props){
     const {media} = postMedia(featured_media)
     return(
-        <View>
-            <Text>{title}</Text>
+        <View style={styles.container}>
+            <Text style={styles.title}>{title}</Text>
+            <WebView
+            html={{content}}
+            />
         </View>
     )
 }

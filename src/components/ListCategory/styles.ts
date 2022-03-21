@@ -13,8 +13,7 @@ export const styles = StyleSheet.create({
         fontSize:22,
     },
     scrollContainer:{
-        minHeight:120,
-        maxHeight:120,
+        minHeight:325,
         paddingLeft:24
     }
 })

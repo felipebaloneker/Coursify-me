@@ -17,7 +17,6 @@ export function Home(){
             contentContainerStyle={{paddingRight:40 }}
             >
                     {listCategory.map(item=>{
-                        console.log(item.name)
                         return(
                             <ListCategory
                             key={item.id}
