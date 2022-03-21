@@ -28,7 +28,7 @@ export function ListPost({
     categories,
 }:Props){
     const {media} = postMedia(featured_media)
-    const uri = "https://discord.com/assets/f9bb9c4af2b9c32a2c5ee0014661546d.png"
+    const uri = media?.media_details.sizes.full.source_url
     return(
         <View style={styles.container}>
             <View>
@@ -44,9 +44,7 @@ export function ListPost({
                     <Text style={styles.buttonText}>Leia Mais</Text>
                 </RectButton>
             </View>
-            {/* <WebView
-            originWhitelist={['*']}
-            source={{html:content}}/> */}
+
         </View>
     )
 }
