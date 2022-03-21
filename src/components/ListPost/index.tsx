@@ -31,14 +31,10 @@ export function ListPost({
     const {media} = postMedia(featured_media)
     const uri = media?.media_details.sizes.full.source_url
     const cleanContent = content.replace(/<\/?[^>]+(>|$)/g, "");
-    const navigation = useNavigation();
-
-    function navigatePost(){
-        navigation.navigate('Post')
-    }
+    const { navigate } = this.props.navigation
 
     return(
-        <RectButton onPress={navigatePost}>
+        <RectButton onPress={()=> navigate('Post')}>
             <View style={styles.container}>
                 <View>
                     <Image source={{uri}}
