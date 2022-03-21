@@ -10,7 +10,8 @@ export const styles = StyleSheet.create({
 		maxHeight:219,
 		backgroundColor:theme.colors.modal,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        padding:39,        
 	},
     button:{
         width:216,
@@ -23,7 +24,11 @@ export const styles = StyleSheet.create({
         shadowOffset: { height: 0, width: 0 },
         shadowOpacity:0.8,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+    },
+    textContainer:{
+        marginTop:11,
+        marginBottom:28,
     },
     modalText:{
        fontSize:12,
