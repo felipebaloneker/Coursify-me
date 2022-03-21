@@ -1,11 +1,10 @@
 import React from "react";
 import { View,Text,Image} from "react-native";
 import { RectButton } from "react-native-gesture-handler";
-import { WebView } from 'react-native-webview';
 import {postMedia} from '../../hook/postMedia'
 import { styles } from "./styles";
-import logo from '../../assets/logo.png'
-import RenderHtml from "react-native-render-html";
+import { useNavigation } from '@react-navigation/native';
+import { Post } from "../../screens/Post";
 
 type render={
     rendered:string,
@@ -32,8 +31,14 @@ export function ListPost({
     const {media} = postMedia(featured_media)
     const uri = media?.media_details.sizes.full.source_url
     const cleanContent = content.replace(/<\/?[^>]+(>|$)/g, "");
+    const navigation = useNavigation();
+
+    function navigatePost(){
+        navigation.navigate('Post')
+    }
+
     return(
-        <RectButton>
+        <RectButton onPress={navigatePost}>
             <View style={styles.container}>
                 <View>
                     <Image source={{uri}}
