@@ -28,6 +28,8 @@ export const styles = StyleSheet.create({
     text:{
         maxHeight:78,
         marginTop:16,
+        fontSize:15,
+        color:theme.colors.textColor,
     },
     buttonText:{
         color:theme.colors.textColorhighlight,
