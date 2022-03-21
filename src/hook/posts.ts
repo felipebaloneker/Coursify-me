@@ -7,8 +7,8 @@ type render = {
 type PostData ={
     id:number;
     title:render;
-    status:string;
-    feature_media:number,
+    status:string,
+    featured_media:number,
     content:render,
     page_view:number,
     categories:[number],

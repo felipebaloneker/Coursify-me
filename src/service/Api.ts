@@ -13,11 +13,18 @@ export default{
     getListPost:async(id:number)=>{
         const listPost = await database.get(`/posts?categories=${id}`)
         .then(function(res){
-            console.log(res)
             return res
         }).catch(err=>{
             console.log(err)
         })
         return listPost;
+    },
+    getPostMedia:async(id:number)=>{
+        const image = await database.get(`/media/${id}`).then(function(res){
+            return res
+        }).catch(err=>{
+            console.log(err)
+        })
+        return image
     }
 }
