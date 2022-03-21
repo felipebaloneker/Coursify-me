@@ -1,12 +1,31 @@
 import React from 'react'
-import {View} from 'react-native'
+import {ScrollView, View, Text} from 'react-native'
 import { Header } from '../../components/Header'
+import { ListCategory } from '../../components/ListCategory'
+import { categories } from '../../hook/categories'
 import { styles } from './styles'
 
 export function Home(){
+    const {listCategory} = categories()
+
     return(
         <View>
             <Header/>
+            <ScrollView
+            style={styles.container}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{paddingRight:40 }}
+            >
+                    {listCategory.map(item=>{
+                        console.log(item.name)
+                        return(
+                            <ListCategory
+                            id={item.id}
+                            name={item.name}
+                            />
+                        )
+                    })}
+            </ScrollView>
         </View>
     )
 }
