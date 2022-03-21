@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { View,Text } from "react-native";
 import {postMedia} from '../../hook/postMedia'
 type render={
     rendered:string,
@@ -26,7 +26,7 @@ export function ListPost({
     const {media} = postMedia(featured_media)
     return(
         <View>
-            
+            <Text>{title}</Text>
         </View>
     )
 }

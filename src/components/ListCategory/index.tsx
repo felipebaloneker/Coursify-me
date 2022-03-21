@@ -1,5 +1,5 @@
 import React from "react"
-import { View,Text } from "react-native"
+import { View,Text, ScrollView } from "react-native"
 import { RectButton } from 'react-native-gesture-handler'
 import { posts } from "../../hook/posts"
 import { ListPost } from "../ListPost"
@@ -24,7 +24,12 @@ export function ListCategory({
                     <Text>VER MAIS ►</Text>
                 </RectButton>
             </View>
-            <View>
+            <ScrollView
+            horizontal
+            style={styles.scrollContainer}
+            showsHorizontalScrollIndicator={false}
+            contentContainerStyle={{paddingRight:40 }}
+            >
                 {
                     listPost.map(item=>{
                         return(
@@ -41,7 +46,7 @@ export function ListCategory({
                         )
                     })
                 }
-            </View>
+            </ScrollView>
         </View>
     )
 }

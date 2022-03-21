@@ -11,5 +11,10 @@ export const styles = StyleSheet.create({
         fontFamily:theme.fonts.text700,
         color:theme.colors.titleColor,
         fontSize:22,
+    },
+    scrollContainer:{
+        minHeight:120,
+        maxHeight:120,
+        paddingLeft:24
     }
 })
