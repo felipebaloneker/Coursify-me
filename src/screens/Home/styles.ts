@@ -3,9 +3,6 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
 	modal:{
-		flex:1,
-	},
-	modalWrp:{
 		position:"absolute",
 		bottom:0,
 		width:'100%',

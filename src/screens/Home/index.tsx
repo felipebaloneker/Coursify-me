@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {ScrollView, View, Modal, Text} from 'react-native'
 import { Header } from '../../components/Header'
 import { ListCategory } from '../../components/ListCategory'
@@ -7,7 +7,15 @@ import { styles } from './styles'
 
 export function Home(){
     const {listCategory} = categories()
-
+    const [modalOpen,setModalOpen]= useState(true)
+    const modalClose =()=>{
+        console.log('close')
+        setModalOpen(false)
+    }
+    useEffect(()=>{
+        setTimeout(modalClose,1000 * 10)
+    },[])
+    
     return(
         <View>
             <Header/>
@@ -26,11 +34,10 @@ export function Home(){
             </ScrollView>
             <Modal 
             transparent={true}
+            visible={modalOpen}
             >
                 <View style={styles.modal}>
-                        <View style={styles.modalWrp}>
-                            <Text>modal</Text>
-                        </View>
+                    <Text>modal</Text>
                 </View>                   
             </Modal>
         </View>
