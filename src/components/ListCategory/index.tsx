@@ -14,7 +14,7 @@ export function ListCategory({
 }:Props){
     const {listPost} = posts(id)
     return(
-        <View style={styles.container}>
+        <View>
             <View style={styles.header}>
                 <Text style={styles.title}>{name}</Text>
                 <Text>Ver Mais</Text>

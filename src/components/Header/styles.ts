@@ -3,6 +3,7 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
 	container:{
+        width:'100%',
         height:64,
         flexDirection:'row',
         backgroundColor:theme.colors.background,
@@ -13,7 +14,6 @@ export const styles = StyleSheet.create({
         },
         shadowOpacity: 0.30,
         shadowRadius: 4.65,
-        
         elevation: 8,
         alignItems:'center',
         justifyContent:"space-around",
