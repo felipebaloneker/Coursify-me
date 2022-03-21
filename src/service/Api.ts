@@ -9,5 +9,15 @@ export default{
             console.log(err)
         })
         return listCategory;
+    },
+    getListPost:async(id:number)=>{
+        const listPost = await database.get(`/posts?categories=${id}`)
+        .then(function(res){
+            console.log(res)
+            return res
+        }).catch(err=>{
+            console.log(err)
+        })
+        return listPost;
     }
 }

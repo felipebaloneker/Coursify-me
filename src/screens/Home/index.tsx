@@ -13,13 +13,14 @@ export function Home(){
             <Header/>
             <ScrollView
             style={styles.container}
-            showsHorizontalScrollIndicator={false}
+            showsVerticalScrollIndicator={false}
             contentContainerStyle={{paddingRight:40 }}
             >
                     {listCategory.map(item=>{
                         console.log(item.name)
                         return(
                             <ListCategory
+                            key={item.id}
                             id={item.id}
                             name={item.name}
                             />

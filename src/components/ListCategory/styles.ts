@@ -3,14 +3,16 @@ import { theme } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
     container:{
-        minHeight:120,
-        maxHeight:120,
-        paddingLeft:24,
-        backgroundColor:theme.colors.menu,
+        padding:15,  
+    },
+    header:{
+        flex:1,
+        flexDirection:'row',
+        justifyContent:'space-between'
     },
     title:{
         fontFamily:theme.fonts.text700,
-        color:theme.colors.menu,
+        color:theme.colors.titleColor,
         fontSize:27,
     }
 })

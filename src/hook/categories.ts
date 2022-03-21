@@ -3,7 +3,7 @@ import Api from "../service/Api";
 import { useState } from 'react'
 
 type CategoryData ={
-    id:string;
+    id:number;
     name:string;
 }
 type resProp = {
