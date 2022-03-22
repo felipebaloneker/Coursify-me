@@ -6,7 +6,7 @@ import {StatusBar} from 'react-native'
 import AppLoading from 'expo-app-loading'
 import {useFonts} from 'expo-font';
 import {Roboto_400Regular,Roboto_500Medium,Roboto_700Bold} from '@expo-google-fonts/roboto';
-import { Routes }  from './src/routes';
+import  Routes   from './src/routes/routes';
 
 export default function App() {
   const [fontLoaded] = useFonts({
@@ -25,7 +25,7 @@ export default function App() {
             translucent={false}
             barStyle='light-content'
           />
-      <Routes/>
+      <Home/>
     </View>
   );
 }

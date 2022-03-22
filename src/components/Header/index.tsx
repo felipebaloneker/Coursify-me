@@ -4,7 +4,6 @@ import {View,Image} from 'react-native'
 import Logo from '../../assets/logo-2.png'
 import { MaterialCommunityIcons} from '@expo/vector-icons'
 import { theme } from '../../global/styles/theme';
-import { mdiMenu } from '@mdi/js';
 
 type Props={
     back?:boolean,
