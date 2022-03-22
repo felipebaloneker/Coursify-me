@@ -4,12 +4,15 @@ import {View,Image} from 'react-native'
 import Logo from '../../assets/logo-2.png'
 import { MaterialCommunityIcons} from '@expo/vector-icons'
 import { theme } from '../../global/styles/theme';
+import { useNavigation } from '@react-navigation/native';
 
 type Props={
     back?:boolean,
 }
 
 export function Header({back}:Props){
+    const navigation = useNavigation()
+    
     return(
         <View style={styles.container}>
             <View
@@ -18,6 +21,7 @@ export function Header({back}:Props){
                 <MaterialCommunityIcons
                     name="arrow-left"
                     size={32}
+                    onPress={()=>{navigation.navigate('Home' as never)}}
                     />
             </View>
             <View
