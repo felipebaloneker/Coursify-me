@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
         alignItems:'center',
         backgroundColor:theme.colors.menu,
         borderRadius:100,
-        marginLeft:150,
+        marginLeft:100,
     },
     logo:{
         margin:5,

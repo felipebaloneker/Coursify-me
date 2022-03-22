@@ -20,7 +20,7 @@ export function Header({back}:Props){
             >
                 <MaterialCommunityIcons
                     name="arrow-left"
-                    size={32}
+                    size={25}
                     onPress={()=>{navigation.navigate('Home' as never)}}
                     />
             </View>

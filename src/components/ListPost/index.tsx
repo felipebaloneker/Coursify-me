@@ -19,7 +19,13 @@ type Props={
     categories:[number],
 }
 export type StackParamList = {
-    Post:Props
+    Post:{
+        id:number;
+        title:string;
+        content:string,
+        status:string;
+        featured_media:number,
+    },
 }
 type NavigationProps= StackNavigationProp<StackParamList>
 
@@ -40,11 +46,9 @@ export function ListPost({
         <TouchableOpacity onPress={()=>{navigation.navigate('Post' ,{
             id,
             title,
+            content,
             status,
             featured_media,
-            content,
-            page_view,
-            categories,
         })}}>
             <View style={styles.container}>
                 <View>
