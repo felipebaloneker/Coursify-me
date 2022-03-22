@@ -1,6 +1,5 @@
 import React from "react"
-import { View,Text, ScrollView } from "react-native"
-import { RectButton } from 'react-native-gesture-handler'
+import { View,Text, ScrollView,TouchableOpacity } from "react-native"
 import { posts } from "../../hook/posts"
 import { ListPost } from "../ListPost"
 import { styles } from "./styles"
@@ -20,9 +19,9 @@ export function ListCategory({
         <View>
             <View style={styles.header}>
                 <Text style={styles.title}>{name}</Text>
-                <RectButton>
+                <TouchableOpacity>
                     <Text>VER MAIS ►</Text>
-                </RectButton>
+                </TouchableOpacity>
             </View>
             <ScrollView
             horizontal

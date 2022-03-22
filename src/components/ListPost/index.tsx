@@ -1,6 +1,5 @@
 import React from "react";
-import { View,Text,Image} from "react-native";
-import { RectButton } from "react-native-gesture-handler";
+import { View,Text,Image,TouchableOpacity} from "react-native";
 import {postMedia} from '../../hook/postMedia'
 import { styles } from "./styles";
 import { useNavigation } from '@react-navigation/native';
@@ -31,10 +30,9 @@ export function ListPost({
     const {media} = postMedia(featured_media)
     const uri = media?.media_details.sizes.full.source_url
     const cleanContent = content.replace(/<\/?[^>]+(>|$)/g, "");
-    const { navigate } = this.props.navigation
 
     return(
-        <RectButton onPress={()=> navigate('Post')}>
+        <TouchableOpacity>
             <View style={styles.container}>
                 <View>
                     <Image source={{uri}}
@@ -45,11 +43,11 @@ export function ListPost({
                 <View style={styles.textWrp}>
                     <Text style={styles.title}>{title}</Text>
                     <Text style={styles.text}>{cleanContent}</Text>
-                    <RectButton>
+                    <TouchableOpacity>
                         <Text style={styles.buttonText}>Leia Mais</Text>
-                    </RectButton>
+                    </TouchableOpacity>
                 </View>
             </View>
-        </RectButton>
+        </TouchableOpacity>
     )
 }
