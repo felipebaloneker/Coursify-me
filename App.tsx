@@ -36,7 +36,7 @@ export default function App() {
             }}
           >
             <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Post" component={Post} />
+            <Stack.Screen name="Post" component={Post}></Stack.Screen>
           </Stack.Navigator>
         </NavigationContainer>
   );

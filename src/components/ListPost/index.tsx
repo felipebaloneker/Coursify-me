@@ -4,6 +4,7 @@ import {postMedia} from '../../hook/postMedia'
 import { styles } from "./styles";
 import { useNavigation } from '@react-navigation/native';
 import { Post } from "../../screens/Post";
+import { StackNavigationProp } from "@react-navigation/stack";
 
 type render={
     rendered:string,
@@ -17,6 +18,10 @@ type Props={
     page_view:number,
     categories:[number],
 }
+export type StackParamList = {
+    Post:Props
+}
+type NavigationProps= StackNavigationProp<StackParamList>
 
 export function ListPost({
     id,
@@ -30,9 +35,17 @@ export function ListPost({
     const {media} = postMedia(featured_media)
     const uri = media?.media_details.sizes.full.source_url
     const cleanContent = content.replace(/<\/?[^>]+(>|$)/g, "");
-    const navigation = useNavigation()
+    const navigation = useNavigation<NavigationProps>()
     return(
-        <TouchableOpacity onPress={()=>{navigation.navigate('Post'as never)}}>
+        <TouchableOpacity onPress={()=>{navigation.navigate('Post' ,{
+            id,
+            title,
+            status,
+            featured_media,
+            content,
+            page_view,
+            categories,
+        })}}>
             <View style={styles.container}>
                 <View>
                     <Image source={{uri}}
