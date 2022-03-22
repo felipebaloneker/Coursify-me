@@ -18,8 +18,6 @@ export const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:"space-around",
         borderBottomColor:theme.colors.overlay,
-
-
 	},
     menu:{
         width:37,
@@ -28,6 +26,9 @@ export const styles = StyleSheet.create({
         alignItems:'center',
         backgroundColor:theme.colors.menu,
         borderRadius:100,
-        marginLeft:180,
+        marginLeft:150,
+    },
+    logo:{
+        margin:5,
     }
 })

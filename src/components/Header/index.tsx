@@ -20,7 +20,9 @@ export function Header({back}:Props){
                     size={32}
                     />
             </View>
-            <View>
+            <View
+            style={styles.logo}
+            >
                 <Image 
                 source={Logo}
                 resizeMode="stretch"
