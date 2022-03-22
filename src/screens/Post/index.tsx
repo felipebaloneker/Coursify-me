@@ -28,8 +28,8 @@ export function Post(){
                     p:{
                         fontSize:17,
                         color:theme.colors.textColor,
-                        fontFamily:theme.fonts.text400
-                    }
+                        fontFamily:theme.fonts.text700
+                    },
                 }}
                 source={{html:routeParams.content}
                 }/>
